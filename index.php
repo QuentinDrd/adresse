@@ -1,5 +1,8 @@
 <?php
 
+header('Access-Control-Allow-Origin: *');
+
+
 if(isset($_GET['adresse']) && $_GET['adresse'] != '') {
 	$apiUrl = "https://api-adresse.data.gouv.fr/search?q=".str_replace(" ", "+", $_GET['adresse'])."&limit=5";
 
